@@ -9,7 +9,8 @@ function MyApp({ Component, pageProps }) {
       <Container
         maxWidth="lg"
         style={{
-          backgroundColor: "white",
+          backgroundColor: "#1b262c",
+          // background-color:#1b262c;
           height: "100vh",
           padding: "0"
         }}
@@ -19,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       </Container>
       <style jsx>{`
         .wrap {
-          background: papayawhip;
+          background-color: #1b262c;
         }
       `}</style>
       <style jsx global>
@@ -31,6 +32,7 @@ function MyApp({ Component, pageProps }) {
             font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
               Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
               sans-serif;
+            color: #bbe1fa;
           }
         `}
       </style>
