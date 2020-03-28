@@ -1,9 +1,16 @@
-const Title = styled.h1`
+import styled from "styled-components";
+const Title = styled.div`
   text-align: center;
-  color: violet;
-  background: papayawhip;
-  margin: 0;
+  color: #bbe1fa;
+  font-size: 1.3em;
+  margin-top: 2em;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 4em;
 `;
 const pageTitle = props => {
-  return <div></div>;
+  return <Title>{props.title}</Title>;
 };
+
+export default pageTitle;
