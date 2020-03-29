@@ -1,12 +1,36 @@
 import styled from "styled-components";
 import Box from "./programBox";
-const ProgramBox = styled.div``;
-const bigbox = () => {
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import db from "./tempdb";
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1
+  }
+  // paper: {
+  //   padding: theme.spacing(2),
+  //   textAlign: 'center',
+  //   // color: theme.palette.text.secondary,
+  // },
+}));
+
+export default function bigbox() {
+  const classes = useStyles();
+
+  const mappedBoxes = db.map((box, index) => {
+    return (
+      <div>
+        <Grid item xs={12} sm={6} lg={3}>
+          <Box title={box.title} img={box.img} />
+        </Grid>
+      </div>
+    );
+  });
   return (
-    <div>
-      <ProgramBox img="/bgd1.jpg" title="big cheeks" />
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        {mappedBoxes}
+      </Grid>
     </div>
   );
-};
-
-export default bigbox;
+}
