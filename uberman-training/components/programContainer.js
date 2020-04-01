@@ -5,7 +5,9 @@ import Grid from "@material-ui/core/Grid";
 import db from "./tempdb";
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    width: "70vw",
+    margin: "auto"
   }
   // paper: {
   //   padding: theme.spacing(2),
@@ -20,7 +22,7 @@ export default function bigbox() {
   const mappedBoxes = db.map((box, index) => {
     return (
       <div>
-        <Grid item xs={12} sm={6} lg={3}>
+        <Grid item xs={8} sm={6} lg={3}>
           <Box title={box.title} img={box.img} />
         </Grid>
       </div>
