@@ -1,35 +1,23 @@
 const db = [
   {
-    title: "powerlifting",
-    img: "/bgd1.jpg"
+    title: "Hybrid",
+    img: "/bgd1.jpg",
+  },
+  {
+    title: "Powerlifting",
+    img: "/bgd1.jpg",
   },
   {
     title: "weightlifting",
-    img: "/bgd2.jpg"
+    img: "/bgd2.jpg",
   },
   {
     title: "bodybuilding",
-    img: "/bgd3.jpg"
+    img: "/bgd3.jpg",
   },
   {
-    title: "armsport",
-    img: "/bgd2.jpg"
+    title: "Tendon",
+    img: "/bgd2.jpg",
   },
-  {
-    title: "strongman",
-    img: "/bgd1.jpg"
-  },
-  {
-    title: "martial arts",
-    img: "/bgd2.jpg"
-  },
-  {
-    title: "sport",
-    img: "/bgd3.jpg"
-  },
-  {
-    title: "mixed",
-    img: "/bgd1.jpg"
-  }
 ];
 export default db;

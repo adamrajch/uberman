@@ -1,50 +1,57 @@
 import styled from "styled-components";
 
 const ProgramBox = styled.div`
-  height: 200px;
-  width:20vw;
-  background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)), url("${props =>
-    props.img}")  ;
-  display:inline-block;
+  height: 180px;
+  // flex-grow:1;
+  flex-shrink: 0;
+  flex-basis: 80%;
+  // flex-basis: 200px;
+  display: flex;
+  display: inline-block;
   border: 2px solid white;
-  object-fit: cover;
-  background-size:cover;
+
   position: relative;
   margin: 0.5em;
- 
-  &:hover{
-      cursor:pointer;
-  }
 
-  &.boxy:hover{
-  
-   filter:opacity(80%)
+  &:hover {
+    cursor: pointer;
   }
-
-  .title:hover{
-  
+  &.boxy:hover {
+    filter: opacity(100%);
   }
+`;
+const Bg = styled.div`
+height:100%;
+width:100%;
+background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.3)), url("${(
+  props
+) => props.img}");
+object-fit: cover;
+background-size:cover;
+filter: blur(3px);
 `;
 const ProgramTitle = styled.div`
   color: white;
   width: 100%;
   height: 20%;
-  text-align: center;
+  // text-align: center;
   position: absolute;
   left: 0;
-  top: 70%;
+  top: 80%;
   right: 0;
-  // margin: auto;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 700;
-  background: rgba(36, 37, 42, 0.3);
-  // box-shadow: 0 1px 1px rgba(0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
-const Box = props => {
+const Box = (props) => {
   return (
-    <ProgramBox img={props.img} className="boxy" as="a" href="">
+    <ProgramBox className="boxy" as="a" href="/">
+      <Bg img={props.img} />
       <ProgramTitle className="title">{props.title}</ProgramTitle>
     </ProgramBox>
   );

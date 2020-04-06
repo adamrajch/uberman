@@ -2,25 +2,28 @@
 import Nav from "../components/nav";
 import styled from "styled-components";
 import Container from "@material-ui/core/Container";
-
+import Footer from "../components/footer";
 function MyApp({ Component, pageProps }) {
   return (
     <div className="wrap">
-      <Container
-        maxWidth="lg"
-        style={{
-          backgroundColor: "#1b262c",
-          // background-color:#1b262c;
-          height: "100vh",
-          padding: "0"
-        }}
-      >
+      <Container maxWidth="lg" className="container">
         <Nav />
         <Component {...pageProps} />
+        <Footer />
       </Container>
       <style jsx>{`
         .wrap {
           background-color: #1b262c;
+          height: 100%;
+          min-height: 100vh;
+          // position:relative;
+        }
+        .container{
+        
+            background-color: #1b262c,
+            height: 100%,
+            min-height:100vh;
+            // position:relative;
         }
       `}</style>
       <style jsx global>
@@ -33,6 +36,11 @@ function MyApp({ Component, pageProps }) {
               Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
               sans-serif;
             color: #bbe1fa;
+          }
+          html,
+          body {
+            width: 100%;
+            height: 100%;
           }
         `}
       </style>

@@ -7,9 +7,9 @@ const Title = styled.div`
   letter-spacing: 0.2em;
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 4em;
+  margin-bottom: 2.5em;
 `;
-const pageTitle = props => {
+const pageTitle = (props) => {
   return <Title>{props.title}</Title>;
 };
 
