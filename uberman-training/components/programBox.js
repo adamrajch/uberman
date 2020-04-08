@@ -9,7 +9,7 @@ const ProgramBox = styled.div`
   display: flex;
   display: inline-block;
   border: 2px solid white;
-
+  background-position: center;
   position: relative;
   margin: 0.5em;
 
@@ -29,21 +29,24 @@ background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.1),rgba(255, 2
 object-fit: cover;
 background-size:cover;
 filter: blur(3px);
+display:flex;
 `;
 const ProgramTitle = styled.div`
   color: white;
-  width: 100%;
-  height: 20%;
-  // text-align: center;
+  width: 33.33%;
+  height: 30%;
+  text-align: center;
   position: absolute;
-  left: 0;
-  top: 80%;
-  right: 0;
+  border: 3px solid white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
   font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 700;
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgba(0, 0, 0, 0.3); /* Black w/opacity/see-through */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 const Title = styled.div`
   text-align: center;
   color: #bbe1fa;
-  font-size: 1.3em;
+  font-size: 2em;
   margin-top: 2em;
   letter-spacing: 0.2em;
   font-weight: 500;

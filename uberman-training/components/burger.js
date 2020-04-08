@@ -3,17 +3,18 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { withStyles } from "@material-ui/core/styles";
+import Link from "next/link";
 
 const StyledMenuItem = withStyles({
   root: {
     // background: "#bbe1fa",
     // borderRadius: 3,
     // border: 0,
-    color: "#1b262c"
+    color: "#1b262c",
     // height: 48,
     // padding: '0 30px',
     // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-  }
+  },
   //   label: {
   //     textTransform: 'capitalize',
   //   },
@@ -22,7 +23,7 @@ const StyledMenuItem = withStyles({
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = event => {
+  const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -50,10 +51,29 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem onClick={handleClose}>about</StyledMenuItem>
-        <StyledMenuItem onClick={handleClose}>programs</StyledMenuItem>
-        <StyledMenuItem onClick={handleClose}>gains</StyledMenuItem>
-        <StyledMenuItem onClick={handleClose}>login</StyledMenuItem>
+        <StyledMenuItem onClick={handleClose}>
+          {" "}
+          <Link href="/about">
+            <a>about</a>
+          </Link>
+        </StyledMenuItem>
+        <StyledMenuItem onClick={handleClose}>
+          {" "}
+          <Link href="/programs">
+            <a>programs</a>
+          </Link>
+        </StyledMenuItem>
+        <StyledMenuItem onClick={handleClose}>
+          <Link href="/gains">
+            <a>gains</a>
+          </Link>
+        </StyledMenuItem>
+        <StyledMenuItem onClick={handleClose}>
+          {" "}
+          <Link href="/login">
+            <a>login</a>
+          </Link>
+        </StyledMenuItem>
       </Menu>
       <style jsx>
         {`
@@ -62,6 +82,10 @@ export default function SimpleMenu() {
             height: 4px;
             background-color: #bbe1fa;
             margin: 4px;
+          }
+          a {
+            color: black;
+            text-decoration: none;
           }
         `}
       </style>
