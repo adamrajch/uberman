@@ -12,7 +12,7 @@ const Footer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 1em;
-  background: #27496d;
+  // background: #27496d;
   filter: opacity(90%);
 `;
 const Name = styled.span`
@@ -20,12 +20,13 @@ const Name = styled.span`
 `;
 const Icon = styled.a`
   padding: 0.3em;
+  color: white;
 `;
 const Foot = () => {
   return (
     <Footer>
       <Name>Adam Rajchwald</Name>
-      <Icon as="a" href="https://github.com/adamrajch">
+      <Icon as="a" href="https://github.com/adamrajch" target="_blank">
         <GitHubIcon />
       </Icon>
     </Footer>

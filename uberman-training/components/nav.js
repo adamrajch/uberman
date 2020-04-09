@@ -42,7 +42,7 @@ const myNav = () => {
             align-items: center;
             min-height: 8vh;
             min-width: 100%;
-            background-color: #1b262c;
+            // background-color: #1b262c;
           }
           .logo {
             font-size: 1.5em;
@@ -69,10 +69,9 @@ const myNav = () => {
           }
           a {
             text-decoration: none;
-            color: black;
             letter-spacing: 0.1em;
             font-weight: bold;
-            color: #bbe1fa;
+            color: #00adb5;
           }
           .burger {
             display: none;

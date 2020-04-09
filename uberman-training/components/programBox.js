@@ -33,11 +33,11 @@ display:flex;
 `;
 const ProgramTitle = styled.div`
   color: white;
-  width: 33.33%;
+  // width: 33.33%;
   height: 30%;
   text-align: center;
   position: absolute;
-  border: 3px solid white;
+  border: 2px solid white;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -50,6 +50,7 @@ const ProgramTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1em 0 1em;
 `;
 const Box = (props) => {
   return (

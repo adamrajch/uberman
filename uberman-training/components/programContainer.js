@@ -8,6 +8,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  margin-bottom: 1em;
 `;
 export default function bigbox() {
   // const classes = useStyles();
